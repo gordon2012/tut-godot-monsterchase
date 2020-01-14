@@ -1,0 +1,291 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/Gameplay.cs" type="Script" id=1]
+[ext_resource path="res://Scenes/Green Zombie.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Red Zombie.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Ghost.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprites/Background.jpg" type="Texture" id=5]
+[ext_resource path="res://Sprites/Ground.jpg" type="Texture" id=6]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/CameraFollow.cs" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6606.14, 50 )
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource( 1 )
+greenZombie = ExtResource( 2 )
+redZombie = ExtResource( 3 )
+ghost = ExtResource( 4 )
+
+[node name="BG Parent" type="Node2D" parent="."]
+editor/display_folded = true
+
+[node name="Background1" type="Sprite" parent="BG Parent"]
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background12" type="Sprite" parent="BG Parent"]
+position = Vector2( -6400.01, 0.00811768 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background2" type="Sprite" parent="BG Parent"]
+position = Vector2( 0, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background15" type="Sprite" parent="BG Parent"]
+position = Vector2( -6400.01, -719.992 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background3" type="Sprite" parent="BG Parent"]
+position = Vector2( 1280, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background11" type="Sprite" parent="BG Parent"]
+position = Vector2( -5120.01, 0.00811768 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background4" type="Sprite" parent="BG Parent"]
+position = Vector2( 1280, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background13" type="Sprite" parent="BG Parent"]
+position = Vector2( -5120.01, -719.992 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background5" type="Sprite" parent="BG Parent"]
+position = Vector2( 2560, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background16" type="Sprite" parent="BG Parent"]
+position = Vector2( -3840.01, 0.00811768 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background6" type="Sprite" parent="BG Parent"]
+position = Vector2( 2560, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background14" type="Sprite" parent="BG Parent"]
+position = Vector2( -3840.01, -719.992 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background7" type="Sprite" parent="BG Parent"]
+position = Vector2( 3840, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background17" type="Sprite" parent="BG Parent"]
+position = Vector2( -2560.01, -719.992 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background8" type="Sprite" parent="BG Parent"]
+position = Vector2( 3840, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background19" type="Sprite" parent="BG Parent"]
+position = Vector2( -2560.01, 0.00811768 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background9" type="Sprite" parent="BG Parent"]
+position = Vector2( 5120, -720 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background18" type="Sprite" parent="BG Parent"]
+position = Vector2( -1280.01, -719.992 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background10" type="Sprite" parent="BG Parent"]
+position = Vector2( 5120, 0 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Background20" type="Sprite" parent="BG Parent"]
+position = Vector2( -1280.01, 0.00811768 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Ground Parent" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 0, -50 )
+
+[node name="Ground" type="Sprite" parent="Ground Parent"]
+position = Vector2( -204, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground14" type="Sprite" parent="Ground Parent"]
+position = Vector2( 3428, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground22" type="Sprite" parent="Ground Parent"]
+position = Vector2( -3382, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground6" type="Sprite" parent="Ground Parent"]
+position = Vector2( 1612, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground20" type="Sprite" parent="Ground Parent"]
+position = Vector2( -5198, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground11" type="Sprite" parent="Ground Parent"]
+position = Vector2( 5244, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground26" type="Sprite" parent="Ground Parent"]
+position = Vector2( -1566, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground3" type="Sprite" parent="Ground Parent"]
+position = Vector2( 704, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground27" type="Sprite" parent="Ground Parent"]
+position = Vector2( -6106, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground13" type="Sprite" parent="Ground Parent"]
+position = Vector2( 4336, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground25" type="Sprite" parent="Ground Parent"]
+position = Vector2( -2474, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground5" type="Sprite" parent="Ground Parent"]
+position = Vector2( 2520, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground19" type="Sprite" parent="Ground Parent"]
+position = Vector2( -4290, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground10" type="Sprite" parent="Ground Parent"]
+position = Vector2( 6152, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground18" type="Sprite" parent="Ground Parent"]
+position = Vector2( -658, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground2" type="Sprite" parent="Ground Parent"]
+position = Vector2( 250, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground29" type="Sprite" parent="Ground Parent"]
+position = Vector2( -6560, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground15" type="Sprite" parent="Ground Parent"]
+position = Vector2( 3882, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground21" type="Sprite" parent="Ground Parent"]
+position = Vector2( -2928, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground7" type="Sprite" parent="Ground Parent"]
+position = Vector2( 2066, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground24" type="Sprite" parent="Ground Parent"]
+position = Vector2( -4744, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground12" type="Sprite" parent="Ground Parent"]
+position = Vector2( 5698, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground23" type="Sprite" parent="Ground Parent"]
+position = Vector2( -1112, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground4" type="Sprite" parent="Ground Parent"]
+position = Vector2( 1158, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground30" type="Sprite" parent="Ground Parent"]
+position = Vector2( -5652, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground16" type="Sprite" parent="Ground Parent"]
+position = Vector2( 4790, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground17" type="Sprite" parent="Ground Parent"]
+position = Vector2( -2020, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground8" type="Sprite" parent="Ground Parent"]
+position = Vector2( 2974, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="Ground9" type="Sprite" parent="Ground Parent"]
+position = Vector2( -3836, 660 )
+texture = ExtResource( 6 )
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground Parent"]
+position = Vector2( 0, 710 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 109.402, 440.692 )
+
+[node name="Main Cam" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
+script = ExtResource( 8 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="Restart" type="Timer" parent="."]
+wait_time = 2.0
+[connection signal="timeout" from="Timer" to="." method="_on_Monster_Spawn"]
+[connection signal="timeout" from="Restart" to="." method="_on_Player_Died"]
